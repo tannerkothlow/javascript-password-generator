@@ -30,6 +30,13 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+h3 {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #707274;
+  text-align: left;
+}
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -86,6 +93,11 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  transition: box-shadow 200ms;
+}
+
+.btn:hover {
+  box-shadow: inset 0px 0px 20px rgb(114, 4, 23);
 }
 
 button[disabled] {
