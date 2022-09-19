@@ -20,7 +20,7 @@ But wait! All that may have been in the project guidelines, but seeing as we jus
 
 ## Installation 
 N/A Already deployed on GitHub pages.
-(url)
+https://tannerkothlow.github.io/javascript-password-generator/
 
 ## Usage
 Usage couldn't be any easier, just hit the big red button and pick what characters you want included, if you want capital letters, and presto! A brand new password to call your very own.
