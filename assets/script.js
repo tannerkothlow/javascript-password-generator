@@ -78,11 +78,35 @@ generateBtn.addEventListener("click", writePassword);
 
 //TO DO: as bonus, make a tool tip on the bottom of the site that cycles through a few tips and trivia.
 
-const tip1 = "bla bla"
-const tip2 = "bla bla"
-const tip3 = "bla bla"
-const tip4 = "bla bla"
-const tip5 = "bla bla"
-const tipArray = [tip1, tip2, tip3, tip4, tip5]
+const tip1 = "There are about 4x10^37 possible combinations for a 20 digit password using this generator!"
+const tip2 = "A high entropy (random string) 20 digit password would take over a billion years to guess using modern computers!"
+const tip3 = "According to webtribunal.net, 24% of Americans use passwords like 'password1' and '123456'"
+const tip4 = "Fun fact: I can only think of three fun password facts. Did you see the other three yet? I hope so."
+const tipArray = [tip1, tip2, tip3, tip4];
+var toolTip = document.querySelector("#tipBar");
 
+//Sets to a random tip on load
+toolTip.textContent = tipArray[Math.floor(Math.random() * tipArray.length)];
 //On a timer, have the currentTip be changed. have currentTip pushed to the html as h3 in style.css style it as block with appropriate fonts and text
+function toolTipUpdate () {
+
+  let ticks = 0;
+
+  var tipTimer = setInterval(function() {
+    //As far as I know in order to have timers work they have to have an if else and ending parameter.
+    if (ticks < 1000) {
+    ticks++;
+    //Can pick the same tip twice in a row but OH WELL, I'll fix that for extra credit later
+    var currentTip = Math.floor(Math.random() * tipArray.length);
+    //let currentTip = newTip;
+    toolTip.textContent = tipArray[currentTip];
+    } else {
+      clearInterval(tipTimer);
+    }
+
+  }, 8000);
+}
+
+toolTipUpdate()
+
+
